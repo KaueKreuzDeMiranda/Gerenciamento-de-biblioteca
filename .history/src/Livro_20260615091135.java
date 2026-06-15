@@ -1,0 +1,15 @@
+public class Livro extends Material implements Emprestavel{
+    private String autor;
+    private int qntPaginas;
+
+    public Livro(int codigo, String titulo, int anoPublicacao, String autor, int qntPaginas) {
+        super(codigo, titulo, anoPublicacao, true);
+        this.autor = autor;
+        this.qntPaginas = qntPaginas;
+    }
+
+    @Override
+    public void mostrarInformacoes() {
+        throw new UnsupportedOperationException("Unimplemented method 'mostrarInformacoes'");
+    }
+}
