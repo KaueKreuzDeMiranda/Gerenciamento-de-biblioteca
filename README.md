@@ -1,18 +1,25 @@
-## Getting Started
+# 📚 Sistema de Gerenciamento de Biblioteca
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto console desenvolvido em **Java** com foco prático no aprendizado e aplicação dos pilares da **Orientação a Objetos (POO)**. O sistema simula o gerenciamento, empréstimo, devolução e geração de relatórios de diferentes materiais didáticos (Livros, Revistas e DVDs).
 
-## Folder Structure
+## 🏗️ Estrutura e Conceitos de POO Aplicados
 
-The workspace contains two folders by default, where:
+O projeto foi estruturado para exercitar conceitos fundamentais de arquitetura de software:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* **Abstração e Herança:**
+* **Polimorfismo:**
+* **Interfaces:**
+* **Encapsulamento:**
+  
+---
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🛠️ Funcionalidades do Sistema
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1.  **Cadastrar Livro, Revista e DVD**
+2.  **Listar Materiais**: Exibe todos os itens cadastrados e suas respectivas informações detalhadas.
+3.  **Consultar por Código**: Busca rápida de um material específico na lista.
+4.  **Realizar Empréstimo**: Altera o status do material para indisponível (caso já não esteja emprestado).
+5.  **Realizar Devolução**: Altera o status do material de volta para disponível.
+6.  **Alterar Dados**: Permite editar todas as informações de um material já cadastrado, identificando dinamicamente seu tipo (`instanceof`).
+7.  **Excluir Material**: Remove permanentemente um item do acervo usando seu código.
+8.  **Gerar Relatório**: Exibe métricas em tempo real sobre a quantidade total de itens, divisões por categorias e o balanço de materiais disponíveis/emprestados.
