@@ -1,0 +1,124 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Menu {
+    Scanner sc = new Scanner(System.in);
+    ArrayList<Material> materiais = new ArrayList<>();
+
+    public void exibirMenu(){
+        int opcao;
+
+        System.out.println("\nO que você deseja fazer?");
+        System.out.println("1 - Cadastrar Livro");
+        System.out.println("2 - Cadastrar Revista");
+        System.out.println("3 - Cadastrar DVD");
+        System.out.println("4 - Listar Materiais");
+        System.out.println("5 - Consultar Material por Código");
+        System.out.println("6 - Realizar Empréstimo");
+        System.out.println("7 - Realizar Devolução");
+        System.out.println("8 - Alterar Dados de um Material");
+        System.out.println("9 - Excluir Material");
+        System.out.println("10 - Gerar Relatório");
+        System.out.println("0 - Encerrar Sistema");
+        opcao = sc.nextInt();
+        sc.nextLine();
+
+        switch(opcao){
+            case 1:
+                cadastrarLivro();
+                break;
+            case 2:
+                cadastrarRevista();
+                break;
+            case 3:
+                cadastrarDVD();
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 0:
+                break;
+            default:
+                System.out.println("\nInsira uma opção válida!");
+        }
+    }
+
+    public void cadastrarLivro(){
+        System.out.println("\nInsira o código do livro:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Insira o título do livro:");
+        sc.nextLine();
+        String titulo = sc.nextLine();
+
+        System.out.println("Insira o ano de publicação do livro:");
+        int anoPublicacao = sc.nextInt();
+
+        System.out.println("Insira o autor do livro:");
+        sc.nextLine();
+        String autor = sc.nextLine();
+
+        System.out.println("Insira a quantidade de páginas do livro:");
+        int qntPaginas = sc.nextInt();
+
+        materiais.add(new Livro(codigo, titulo, anoPublicacao, autor, qntPaginas));
+    }
+
+    public void cadastrarRevista(){
+        System.out.println("Insira o código da revista:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Insira o título da revista:");
+        sc.nextLine();
+        String titulo = sc.nextLine();
+
+        System.out.println("Insira o ano de publicação da revista:");
+        int anoPublicacao = sc.nextInt();
+
+        System.out.println("Insira a edição da revista:");
+        sc.nextLine();
+        String edicao = sc.nextLine();
+
+        System.out.println("Insira a categoria da revista:");
+        sc.nextLine();
+        String categoria = sc.nextLine();
+
+        materiais.add(new Revista(codigo, titulo, anoPublicacao, edicao, categoria));
+    }
+
+    public void cadastrarDVD(){
+        System.out.println("Insira o código do DVD:");
+        int codigo = sc.nextInt();
+
+        System.out.println("Insira o título do DVD:");
+        sc.nextLine();
+        String titulo = sc.nextLine();
+
+        System.out.println("Insira o ano de publicação do DVD:");
+        int anoPublicacao = sc.nextInt();
+
+        System.out.println("Insira a duração do DVD:");
+        double duracao = sc.nextDouble();
+
+        System.out.println("Insira a classificação do DVD:");
+        sc.nextLine();
+        String classificacao = sc.nextLine();
+
+        materiais.add(new DVD(codigo, titulo, anoPublicacao, duracao, classificacao));
+    }
+
+    public void listarMateriais(){
+        System.out.println("");
+    }
+}
