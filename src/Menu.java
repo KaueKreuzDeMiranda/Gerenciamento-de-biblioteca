@@ -53,6 +53,7 @@ public class Menu {
                     excluirMaterial();
                     break;
                 case 10:
+                    relatorio();
                     break;
                 case 0:
                     break;
